@@ -11,9 +11,11 @@ class HttpHelper {
   final String urlSearchBase = 'https://api.themoviedb.org/3/search/movie?api_key=e3fd37e8dd3eca6eecb8808906be73bc&query=';
 
   Future<List> getUpcoming() async {
-    final String upcoming = urlBase + urlUpcoming + urlKey + urlLanguage;
-    http.Response result = await http.get(upcoming);
-    var myResult = await http.get(upcoming);
+    //final String upcoming = urlBase + urlUpcoming + urlKey + urlLanguage;
+    //Change to:
+    
+    http.Response result = await http.get(upcoming); //The argument type 'String' can't be assigned to the parameter type 'Uri'
+    var myResult = await http.get(upcoming); //The argument type 'String' can't be assigned to the parameter type 'Uri'
 
     if (result.statusCode == HttpStatus.ok) {
       final jsonResponse = json.decode(result.body);
