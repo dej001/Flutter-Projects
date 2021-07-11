@@ -30,7 +30,7 @@ class TimerHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final List<PopupMenuItem<String>> menuItems = List<PopupMenuItem<String>>();
+    final List<PopupMenuItem<String>> menuItems = []; // List<PopupMenuItem<String>>(); --Depreciated in latest Dart version 2.1x
     menuItems.add(PopupMenuItem(
       value: 'Settings',
       child: Text('Settings'),
