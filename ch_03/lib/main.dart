@@ -100,7 +100,7 @@ class TimerHomePage extends StatelessWidget {
                         TimerModel timer = snapshot.data;
                         return Container(
                             child: CircularPercentIndicator(
-                          radius: availableWidth / 2,
+                          radius: availableWidth / 2.5,
                           lineWidth: 10.0,
                           percent: (timer.percent == null) ? 1 : timer.percent,
                           center: Text( (timer.time == null) ? '00:00' : timer.time ,
